@@ -26,7 +26,7 @@ img {
 }
 
 body {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--soft-white);
   margin: 0;
   padding: 0;
   font-family: 'Red Hat Text', serif;
@@ -53,6 +53,20 @@ ul {
   padding: 8px 24px;
 }
 
+@media screen and (width>=768px) {
+  .main {
+    padding-inline: 40px;
+  }
+}
+
+@media screen and (width>=1040px) {
+  .main {
+    padding-inline: 112px;
+    display: flex;
+    gap: 32px;
+  }
+}
+
 h1 {
   color: var(--brown);
   font-size: 40px;
@@ -74,6 +88,19 @@ h1 {
 .filters {
   display: flex;
   gap: 18px;
+  margin-bottom: 24px;
+}
+
+@media screen and (width>=768px) {
+  .filters {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (width>=1040px) {
+  .filters {
+    margin-bottom: 42px;
+  }
 }
 
 .filter {
@@ -93,6 +120,19 @@ h1 {
 .gallery {
   display: grid;
   justify-content: center;
+}
+
+@media screen and (width > 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 213px);
+    gap: 32px 24px;
+  }
+}
+
+@media screen and (width > 1040px) {
+  .gallery {
+    grid-template-columns: repeat(3, 250px);
+  }
 }
 
 .product {
@@ -159,6 +199,41 @@ h1 {
   font-size: 14px;
 }
 
+.product-name,
+.product-price {
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 16px;
+  margin-block: 4px;
+}
+
 .product-name {
-  color: ;
+  color: var(--brown);
+}
+
+.cart {
+  background-color: var(--white);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (width>=1024px) {
+  .cart {
+    width: 384px;
+    height: fit-content;
+  }
+}
+
+.cart-title {
+  color: var(--orange);
+  font-size: 24px;
+  font-weight: var(--bold);
+}
+
+.cart-empty {
+  color: #87635a;
+  font-weight: var(--semibold);
+  text-align: center;
 }
