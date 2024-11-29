@@ -214,8 +214,12 @@ h1 {
 .cart {
   background-color: var(--white);
   padding: 24px;
+}
+
+.empty-cart {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -232,8 +236,12 @@ h1 {
   font-weight: var(--bold);
 }
 
-.cart-empty {
+.text-empty-cart {
   color: #87635a;
   font-weight: var(--semibold);
   text-align: center;
+}
+
+.hide {
+  display: none;
 }

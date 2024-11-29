@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Product List With Cart</title>
+    <title>Shopping Cart</title>
   </head>
 
   <body>
@@ -208,7 +208,6 @@
               <source media="(min-width: 1024px)" srcset="./assets/images/image-meringue-desktop.jpg" />
               <source media="(min-width: 768px)" srcset="./assets/images/image-meringue-tablet.jpg" />
               <source media="(min-width: 320px)" srcset="./assets/images/image-meringue-mobile.jpg" />
-              <img class="product-image" src="./assets/images/image-meringue-mobile.jpg" alt="waffle image" />
             </picture>
             <div class="buttons-container-effect">
               <button class="button add-to-cart" data-name="Lemon Meringue Pie" data-price="5.00" data-type="add">
@@ -342,16 +341,42 @@
           <p class="product-price">$6.50</p>
         </article>
       </section>
-      <section class="cart">
-        <h3 class="cart-title">Your Cart (<span id="cart-quantity" class="cart-quantity">0</span>)</h3>
-        <img id="cart-image" src="./assets/images/illustration-empty-cart.svg" alt="empty cart image" />
-        <span class="cart-empty">Your added items will appear here</span>
 
-        <!-- <div id="cart-products" class="cart-products"></div>
-       <div id="total-order-container" class="total-order-container hide">
-        <span>Total Order</span>
-        <span id="total-order" class="total-order">$46.50</span>
-      </div> -->
+       <section class="cart">
+        <h3 class="cart-title">Your Cart (<span id="cart-quantity" class="cart-quantity">0</span>)</h3>
+          <div id="empty-cart">
+            <div class="cart-image" id="cart-image">
+              <img class src="./assets/images/illustration-empty-cart.svg">
+               <span class="text-empty-cart">Your added items will appear here</span>
+            </div>
+          </div> 
+
+          <div class="full-cart" id="full-cart">
+            <p></p>$<span id='order-price-total'>0</span></p>
+          </div>
+
+          <div class="total-order-container hide" id="total-order-container">
+            <span class="total-order"></span>
+            <span class="total-price" id="total-price">$46.50</span>
+            <img src="/assets/images/icon-carbon-neutral.svg">
+            <p class="text-carbon-neutral">This is a <span class="text-carbon-neutral-bold">carbon-neutral</span>delivery</p>
+          </div>
+          <button class="confirm-order" id="condirm-order hide">Confirm Order</button>
+          </div>
+          <!-- <div class="modal" id="modal">
+            <div class="header-confirm">
+              <img class="icon-order-confirmed" src="/assets/images/icon-order-confirmed.svg" alt="confirmed">
+              <h1>Order Confirmed</h1>
+              <span class="product-tag">We hope you enjoy your food!</span>
+            </div>
+            <div class="cart-confirmed"></div>
+            <div class="order-total order-total-confirm">
+            <p>Order Total</p>
+            <p class="total-price">$<span id='total-price'>0</span></p>
+          </div>
+          </div>
+          <button class="confirm-order" id="confirm-order"></button>
+          </div> -->
       </section>
     </main>
     <script src="./js/scripts.js"></script>
